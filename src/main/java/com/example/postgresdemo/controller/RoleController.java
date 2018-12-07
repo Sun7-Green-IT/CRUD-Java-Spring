@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api")
@@ -18,10 +19,5 @@ public class RoleController {
     @GetMapping("/role")
     public List<Role> getRoles() {
         return roleRepository.findAll();
-    }
-
-    @PostMapping("/role")
-    public Role createUser(@Valid @RequestBody Role role) {
-        return roleRepository.save(role);
     }
 }

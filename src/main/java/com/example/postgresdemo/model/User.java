@@ -16,10 +16,10 @@ public class User {
     private String firstname;
     @Column(name = "lastname")
     private String lastname;
-    //private Date birthday;
+    private Date birthday;
     @Column(name = "email")
     private String email;
-    //private Date createdat;
+    private Date createdat;
 
     public UUID getUserId() {
         return userId;
@@ -41,13 +41,13 @@ public class User {
         this.lastname = lastname;
     }
 
-    /*public Date getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
-    }*/
+    }
 
     public String getEmail() {
         return email;
@@ -57,11 +57,11 @@ public class User {
         this.email = email;
     }
 
-    /*public Date getCreatedat() {
+    public Date getCreatedat() {
         return createdat;
     }
 
     public void setCreatedat(Date createdat) {
         this.createdat = createdat;
-    }*/
+    }
 }
