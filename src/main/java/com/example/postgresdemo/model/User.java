@@ -14,11 +14,18 @@ public class User {
 
     @Column(name = "firstname")
     private String firstname;
+
     @Column(name = "lastname")
     private String lastname;
+
     private Date birthday;
+
     @Column(name = "email")
     private String email;
+
+    @Column(name = "role_id")
+    private UUID roleId;
+
     private Date createdat;
 
     public UUID getUserId() {
@@ -55,6 +62,14 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public UUID getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(UUID roleId) {
+        this.roleId = roleId;
     }
 
     public Date getCreatedat() {
