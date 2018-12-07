@@ -11,7 +11,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id", updatable = false, nullable = false)
     private UUID userId;
-
+/*
     @Column(name = "firstname")
     private String firstname;
 
@@ -27,11 +27,11 @@ public class User {
     private UUID roleId;
 
     private Date createdat;
-
+*/
     public UUID getUserId() {
         return userId;
     }
-
+/*
     public String getFirstname() {
         return firstname;
     }
@@ -78,5 +78,5 @@ public class User {
 
     public void setCreatedat(Date createdat) {
         this.createdat = createdat;
-    }
+    }*/
 }
