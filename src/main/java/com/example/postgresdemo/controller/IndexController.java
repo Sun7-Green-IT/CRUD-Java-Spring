@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-public class IndexCOntroller {
+public class IndexController {
 
     @GetMapping("/helloworld")
     public String hello() {

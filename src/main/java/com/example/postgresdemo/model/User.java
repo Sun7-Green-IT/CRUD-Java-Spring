@@ -1,18 +1,18 @@
 package com.example.postgresdemo.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.UUID;
 
 @Entity
-@Table(name = "user")
+@Table(name = "user", schema = "public")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id", updatable = false, nullable = false)
     private UUID userId;
-/*
-    @Column(name = "firstname")
+
     private String firstname;
 
     @Column(name = "lastname")
@@ -27,11 +27,11 @@ public class User {
     private UUID roleId;
 
     private Date createdat;
-*/
+
     public UUID getUserId() {
         return userId;
     }
-/*
+
     public String getFirstname() {
         return firstname;
     }
@@ -78,5 +78,5 @@ public class User {
 
     public void setCreatedat(Date createdat) {
         this.createdat = createdat;
-    }*/
+    }
 }
